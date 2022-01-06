@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'latlongproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'local',
-        'USER': 'postgres',
+        'NAME': '',
+        'USER': '',
         'PASSWORD': '',
     },
 }
@@ -126,4 +126,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
