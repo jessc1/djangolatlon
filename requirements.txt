@@ -1,0 +1,4 @@
+Django
+psycopg2-binary
+GDAL==3.3.2
+django_leaflet

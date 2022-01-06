@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Delete Local</h1>
+    <form action="" method="post">{% csrf_token %}
+      <p>Confirm Delete? "{{ local.name }}"?</p>
+      <input type="submit" value="Delete">
+    </form>
+{% endblock content %}

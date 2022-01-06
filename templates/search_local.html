@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Search {% endblock title %}
+{% block content %}
+  <h1>Search Local </h1>
+  {% for local in local_list %}
+    <div>
+        <h3><a href="{{ local.get_absolute_url }}">{{ local.name }}</a></h3>
+        <p>Location: {{ local.location }}</p>
+        <p>Region: $ {{ local.region }}</p>        
+    </div>
+  {% endfor %}
+{% endblock content %}
