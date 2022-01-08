@@ -4,5 +4,5 @@ from .models import Local
 
 @admin.register(Local)
 class LocalAdmin(OSMGeoAdmin):
-    list_display = ('name', 'location', 'region')
+    list_display = ('name', 'region')
     

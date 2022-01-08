@@ -5,7 +5,7 @@ from django.urls import reverse
 class Local(models.Model):
     
     name = models.CharField(max_length=100)
-    location = models.PointField()
+    #location = models.PointField()
     address = models.CharField(max_length=100)
     city = models.CharField(max_length=50)
     lon = models.FloatField()

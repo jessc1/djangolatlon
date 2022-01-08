@@ -11,8 +11,8 @@
 <script type="text/javascript">
   function map_init(map, options) {
     // get point lat and lon
-    var lon = "{{ local.location.x }}";
-    var lat = "{{ local.location.y }}";
+    var lon = "{{ local.lon }}";
+    var lat = "{{ local.lat }}";
 
     // zoom to point & add it to map
     map.setView([lat, lon], 12);

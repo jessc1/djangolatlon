@@ -13,13 +13,29 @@
         //var map = L.map('map').setView([lat, lon], 12);
         function map_init(map, options) {
           
-          
+          //var lon = "{{ local.location.x }}";
+          //var lat = "{{ local.location.y }}";
           map.on('click', function (e) {
             
             var lat = e.latlng.lat;
             var lon = e.latlng.lng;
-            var marker = L.marker([lat, lon])
+            var popup = `<form action="{% url 'add_local' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for=" Note">Add Note</label>
+              
+            </div>
+            <input type="hidden" name="lat" value="${lat}">
+            <input type="hidden" name="lon" value ="${lon}">
+            <div class="form-group">
+              <label for="note">Location</label>
+              <textarea class='form-control' name="note_des" >Location note here</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>`;
+            var marker = L.marker([lat, lon]).bindPopup(popup)
             marker.addTo(map)
+            console.log(e)
             map.off('click')
 
             
@@ -27,8 +43,7 @@
         }
         
       </script>       
-      {{ form.as_p }}
-     
+      {{ form.as_p }}     
       <input type="submit" value="Add">
     </form>
 {% endblock content %}

@@ -26,13 +26,15 @@ class LocalDetailView(DetailView):
 class LocalCreateView(CreateView):
     model = Local
     template_name = 'add_local.html'
-    fields = ['name', 'address', 'city', 'lat', 'lon', 'area','region', 'visited']
+    fields = ['name', 'address', 'city',
+              'lat', 'lon', 'area','region', 'visited']
 
 
 class LocalUpdateView(UpdateView):
     model = Local
     template_name= 'update_local.html'
-    fields = '__all__'
+    fields = ['name', 'address', 'city',
+              'lat', 'lon', 'area','region', 'visited']
 
 class LocalDeleteView(DeleteView):
     model = Local
