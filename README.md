@@ -34,6 +34,7 @@ python manage.py runserver
 ```
 python manage.py test
 ```
+To add a local is necessary to copy the lat and lot from the marker popup in the fields in the form
 ## Frameworks :
 * Django  
 
