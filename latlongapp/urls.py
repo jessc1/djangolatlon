@@ -16,5 +16,5 @@ urlpatterns = [
     path('local/add/',LocalCreateView.as_view(), name='add_local'),
     path('local/<int:pk>/del',LocalDeleteView.as_view(), name='local_delete'),
     path('local/search/', SearchResultsListView.as_view(), name='search_results'),
-    path('local',HomePageView.as_view(), name='home'),
+    path('',HomePageView.as_view(), name='home'),
 ]

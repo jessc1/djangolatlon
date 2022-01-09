@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.views.generic  import ListView, DetailView, CreateView, \
      UpdateView, DeleteView, TemplateView
 
-#from django.views.generic import TemplateView
 from django.urls import reverse_lazy
 from .models import Local
 from django.db.models import Q
@@ -49,7 +48,8 @@ class SearchResultsListView(ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         return Local.objects.filter(
-            Q(name__icontains=query)|Q(region__icontains=query)|Q(location__icontains=query)
+            Q(name__icontains=query)|Q(region__icontains=query)|Q(area__icontains=query) \
+            
 
         )    
 
