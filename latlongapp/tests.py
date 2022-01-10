@@ -36,7 +36,7 @@ class TestLocalView(TestCase):
         })
 
 
-    def test_book_delete_view(self): 
+    def test_local_delete_view(self): 
         response = self.client.delete(
             reverse('local_delete', args='1'))
 
