@@ -60,6 +60,10 @@ class TestLoggedInLocalView(TestCase):
         test_user = User.objects.create_user(username='ani', password='12345')
         test_user.save()
         self.client = Client()
+        
+    def test_user_greeting_not_authenticated(self):        
+        response = self.client.get('/')
+        self.assertEquals(response.status_code, 200)
 
 
 
