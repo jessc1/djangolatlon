@@ -27,7 +27,7 @@ class TestLocalView(TestCase):
             'latitude': '-23.5817',
             'longitude': '-46.4623',
             'area': '3.9586677',
-            'Region': 'Zona Leste',
+            'Region': 'Leste',
             'visited': '2020-08-01',            
             
         })
