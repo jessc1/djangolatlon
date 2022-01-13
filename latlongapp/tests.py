@@ -55,7 +55,7 @@ class TestLocalModel(TestCase):
 
 
 class TestLoggedInLocalView(TestCase):
-    """Test the greeting view for the authenticated users."""
+    
     def setUp(self):
         test_user = User.objects.create_user(username='ani', password='12345')
         test_user.save()
